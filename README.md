@@ -14,3 +14,25 @@ Quadtree creation can be parametrized by three parameters:
 The OpenGL graphics library is used to render the results, regions as well as the underlying triangle mesh. Navigation (e.g. zooming, moving) is available by keyboard and mouse.
 
 Example meshes are provided in wavefront *.obj format and can be opened from inside the program.
+
+
+System requirements:
+----------------------
+
+Minimum Operating system:   Windows XP SP3
+Minimum OpenGL version:     3.1
+
+In case of an OpenGL error please update your graphics card drivers. 
+
+Alternatively perform the following steps to use Mesa software rendering:
+
+1.	Copy the file "opengl32.dll" from the MesaGL subfolder to the folder 
+	where the file "QuadtreeDemo.exe" is located.
+2.	Restart the demo.
+
+Build instructions:
+----------------------
+
+The project should compile and link in Visual Studio 2005 and later.
+Project and solution files are provided for VS 2005 and VS 2017. 
+Parts of the source code depend on Microsoft's WIN32/ATL libraries.
