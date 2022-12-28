@@ -1,0 +1,297 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "#include ""Resources\\QuadtreeDemo.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_INFO DIALOGEX 0, 0, 163, 322
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION
+CAPTION "Info"
+FONT 8, "MS Shell Dlg 2", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_DEPTH,110,209,43,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    CONTROL         "",IDC_SPIN_DEPTH,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,100,209,9,14
+    CONTROL         "Number of triangles\nper region (10-10k): ",IDC_RADIO_ABS_NUM,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP,13,229,92,17
+    CONTROL         "Percentage of total number of triangles p. region (0.1-100%): ",IDC_RADIO_RATIO,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,13,251,92,26
+    EDITTEXT        IDC_EDIT_SIZE,110,231,43,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    CONTROL         "",IDC_SPIN_SIZE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,100,230,9,14
+    EDITTEXT        IDC_EDIT_RATIO,110,261,43,14,ES_RIGHT | ES_AUTOHSCROLL,WS_EX_RIGHT
+    PUSHBUTTON      "Reset View",IDRESET_VIEW,11,283,64,14
+    DEFPUSHBUTTON   "Apply Changes",IDAPPLY,90,283,64,14,WS_DISABLED
+    PUSHBUTTON      "Help...",IDABOUT,11,303,64,14
+    PUSHBUTTON      "Open File...",IDOPEN_FILE,90,303,64,14
+    LTEXT           "Max. depth level\n(1-10): ",IDC_STATIC,13,208,69,19
+    LTEXT           "-",IDC_STATIC_NUM_TRIANGLES,110,90,43,10,SS_SUNKEN,WS_EX_RIGHT
+    LTEXT           "Number of triangles:",IDC_STATIC,13,90,72,12
+    LTEXT           "-",IDC_STATIC_PERCENT,110,111,43,10,SS_SUNKEN,WS_EX_RIGHT
+    LTEXT           "As percentage of total number of triangles [%]:",IDC_STATIC,13,104,92,17
+    LTEXT           "-",IDC_STATIC_TRIANGLES_TOTAL,110,44,43,10,SS_SUNKEN,WS_EX_RIGHT
+    LTEXT           "Number of triangles:",IDC_STATIC,13,45,72,12
+    LTEXT           "-",IDC_STATIC_CURRENT_DEPTH,110,75,15,10,SS_SUNKEN,WS_EX_RIGHT
+    LTEXT           "Current depth ratio:",IDC_STATIC,13,76,72,12
+    LTEXT           "-",IDC_STATIC_MAX_DEPTH,137,75,16,10,SS_SUNKEN,WS_EX_RIGHT
+    LTEXT           "/",IDC_STATIC,129,75,8,8
+    LTEXT           "-",IDC_STATIC_LENGTH,110,16,43,10,SS_SUNKEN,WS_EX_RIGHT
+    LTEXT           "Length [m]:",IDC_STATIC,13,17,66,12
+    LTEXT           "-",IDC_STATIC_WIDTH,110,30,43,10,SS_SUNKEN,WS_EX_RIGHT
+    LTEXT           "Width [m]:",IDC_STATIC,13,31,66,12
+    LTEXT           "",IDC_STATIC_ARROW,95,210,10,8,0,WS_EX_RIGHT
+    LTEXT           "-",IDC_STATIC_CONFORMITY,110,164,43,10,SS_SUNKEN,WS_EX_RIGHT
+    LTEXT           "Total deviation [%]:",IDC_STATIC,13,165,85,12
+    LTEXT           "Mesh info",IDC_STATIC_MESH_INFO,6,5,64,10
+    LTEXT           "Quadtree parameters",IDC_STATIC_QUADTREE_PARAM,6,196,90,10
+    LTEXT           "-",IDC_STATIC_MEDIAN,110,178,43,10,SS_SUNKEN,WS_EX_RIGHT
+    LTEXT           "Median of deviation [%]:",IDC_STATIC,13,179,90,10
+    LTEXT           "Search results",IDC_STATIC_SEARCHRESULTS,6,64,123,10
+    LTEXT           "Quadtree statistics",IDC_STATIC_QUADTREE_RESULTS,6,131,110,12
+    LTEXT           "Deviation from parameters as percentage of total number of triangles.",IDC_STATIC,13,143,141,19
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 166, 319
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Help"
+FONT 8, "MS Shell Dlg 2", 400, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_COMBO_FONT,12,192,35,12,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "<a>Link</a>",IDC_SYSLINK3,"SysLink",WS_TABSTOP,49,258,98,9
+    CONTROL         "<a>Link</a>",IDC_SYSLINK1,"SysLink",WS_TABSTOP,49,271,98,9
+    CONTROL         "<a>Link</a>",IDC_SYSLINK2,"SysLink",WS_TABSTOP,49,283,98,9
+    DEFPUSHBUTTON   "OK",IDOK,54,301,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,110,301,50,14
+    LTEXT           "",IDC_STATIC_AUTHOR,49,245,90,11
+    LTEXT           "Shift+Cursor down",IDC_STATIC,77,33,66,10
+    LTEXT           "Shift+Cursor up",IDC_STATIC,77,21,64,10
+    LTEXT           "Zoom in:",IDC_STATIC,12,21,42,10
+    LTEXT           "Zoom out:",IDC_STATIC,12,33,42,10
+    LTEXT           "Scroll down",IDC_STATIC,77,124,41,10
+    LTEXT           "Scroll up",IDC_STATIC,77,112,41,10
+    LTEXT           "Zoom out:",IDC_STATIC,12,124,41,10
+    LTEXT           "Zoom in:",IDC_STATIC,12,112,41,10
+    LTEXT           "Toggle windows: ",IDC_STATIC,12,81,60,11
+    LTEXT           "Ctrl+Tab",IDC_STATIC,77,81,46,10
+    LTEXT           "Move mouse and keep left button pressed.",IDC_STATIC,77,136,66,24
+    LTEXT           "Move mesh:",IDC_STATIC,12,136,53,10
+    LTEXT           "F3",IDC_STATIC,77,57,66,10
+    LTEXT           "Reset view:",IDC_STATIC,12,57,42,10
+    LTEXT           "Cursor keys",IDC_STATIC,77,69,64,10
+    LTEXT           "Move camera:",IDC_STATIC,12,69,54,10
+    LTEXT           "",IDC_STATIC_VERSION,49,233,102,11
+    LTEXT           "License:",IDC_STATIC,12,271,32,9
+    LTEXT           "Website:",IDC_STATIC,12,283,33,9
+    LTEXT           "Email:",IDC_STATIC,12,258,32,9
+    LTEXT           "Author:",IDC_STATIC,12,245,31,12
+    LTEXT           "Keyboard navigation",IDC_STATIC_KEY_NAV,7,7,84,10
+    LTEXT           "Mouse navigation",IDC_STATIC_MOUSE_NAV,7,100,84,10
+    LTEXT           "Quadtree Demo",IDC_STATIC_ABOUT,8,219,139,10
+    LTEXT           "Dialog font size",IDC_STATIC_DLG_SIZE,8,162,84,10
+    LTEXT           "Please restart the program for the changes to take effect.",IDC_STATIC,77,176,70,43
+    LTEXT           "F2",IDC_STATIC,77,45,66,10
+    LTEXT           "Zoom to region:",IDC_STATIC,12,45,53,10
+    LTEXT           "Active:",IDC_STATIC,12,176,30,10
+    LTEXT           "",IDC_STATIC_ACTIVE_FONT,50,176,13,9
+    LTEXT           "OpenGL:",IDC_STATIC,12,233,31,12
+END
+
+IDD_DIALOG_OPENGL DIALOGEX 0, 0, 276, 97
+STYLE DS_SETFONT | DS_SETFOREGROUND | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "QuadtreeDemo OpenGL Error"
+FONT 8, "MS Shell Dlg 2", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,220,79,50,14,WS_GROUP
+    PUSHBUTTON      "Enable Mesa mode && Restart",IDCOPY_MESA,104,79,105,14
+    LTEXT           "OpenGL",IDC_STATIC_OPENGL,52,14,205,23
+    ICON            "",IDC_STATIC_ICON,11,19,20,20
+    LTEXT           "OpenGL 2",IDC_STATIC_OPENGL2,53,41,205,24
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,7,75,266,1
+END
+
+IDD_DIALOG_MSGBOX DIALOGEX 0, 0, 249, 69
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg 2", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDBUTTON2,192,52,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDBUTTON1,135,52,50,14
+    ICON            "",IDC_STATIC_ICON,10,14,21,20
+    LTEXT           "",IDC_STATIC_MESSAGE,46,14,196,29
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_INFO, DIALOG
+    BEGIN
+        RIGHTMARGIN, 162
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 316
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 159
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 315
+    END
+
+    IDD_DIALOG_OPENGL, DIALOG
+    BEGIN
+        RIGHTMARGIN, 273
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_DIALOG_MSGBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS 
+BEGIN
+    VK_ESCAPE,      ID_ESCAPE,              VIRTKEY, NOINVERT
+    VK_F4,          ID_ESCAPE,              VIRTKEY, ALT, NOINVERT
+    VK_F3,          ID_RESET_VIEW,          VIRTKEY, NOINVERT
+    VK_TAB,         ID_TOGGLE_WINDOWS,      VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_ZOOM_TO_REGION,      VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_TITLE          ICON                    "Resources\\title_quad.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_USERDAT       "Userdat directory could not be created."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_QUADTREE_PROPS 
+                            "Quadtree properties could not be written to disk."
+    IDS_ERROR_PROG_SETTINGS "Program settings could not be written to disk."
+    IDS_ERROR_INVALID_PERCENT 
+                            "Invalid percentage. Only values between 0.1 and 100% are allowed."
+    IDS_ERROR_INVALID_NUM_TRIS 
+                            "Invalid number of triangles. Only values between 10 and 10000 are allowed."
+    IDS_ERROR_INVALID_DEPTH "Invalid depth. Only values between 1 and 10 are allowed."
+    IDS_ERROR_PROPS_INPUT   "Parameter Input Error"
+    IDS_ERROR_COMCTRL       "Some GUI controls could not be properly initialized."
+    IDS_YES                 "&Yes"
+    IDS_NO                  "&No"
+    IDS_MODULE_FAILED       "Getting module file name failed."
+    IDS_CAPTION_ERROR       "Error"
+    IDS_ERROR_COMCTRL2      "\nVersion 6 of system module comctl32.dll failed to load.\nPlease try a full rebuild of the project."
+    IDS_ERROR_OPENGL1       "Your OpenGL graphics card driver is not supported. Please update your driver to at least version: %d.%d\n\n"
+    IDS_LINK_EMAIL          "<a href=""mailto:dexterity2000@gmail.com"">dexterity2000@gmail.com</a>"
+    IDS_LINK_LICENSE        "<a href=""http://opensource.org/licenses/MIT"">The MIT License</a>"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_LINK_WEBSITE        "<a href=""https://sourceforge.net/projects/quadtreedemo/"">Sourceforge</a>"
+    IDS_AUTHOR              "Frank Dockhorn 2019"
+    IDS_LINK_MESA           "https://sourceforge.net/projects/quadtreedemo/files/Mesa/opengl32.zip/download"
+    IDS_ERROR_OPENGL2       "Alternatively enable Mesa software rendering by pressing the button below. The demo will then be restarted."
+    IDS_RESTART_FAILED      "Restarting application failed. %s"
+    IDS_LINK_TEMPLATE       "<a href=""%s"">%s</a>"
+    IDS_LOAD_ERROR          "The following file could not be opened:\n\n"
+    IDS_INVALID_FILE_FORMAT "\n\nInvalid file format. Error at line: %d."
+    IDS_COPY_FAILED         "Copying of opengl32.dll failed."
+    IDS_AUTOLOAD            "The application terminated unexpectedly.\nWould you like to restore the last opened file?\n\nFile: %s"
+    IDS_REOPEN              "Confirm file restoration"
+END
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+#include "Resources\QuadtreeDemo.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
