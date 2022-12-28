@@ -1,0 +1,44 @@
+Troubleshooting Guide for building or running the project:
+-----------------------------------------------------------
+
+Problem:
+	Your OpenGL windows driver doesn't support version 3.1. 
+
+Solution:
+	Try to update your graphics card drivers.
+	
+	Alternatively perform the following steps to use Mesa software rendering:
+
+	1.	Copy the file "opengl32.dll" from the MesaGL subfolder to the folder 
+		where the file "QuadtreeDemo.exe" is located.
+	2.	Restart the demo.
+	
+Problem:
+	An error message appears saying that GUI controls could not be initialized. 
+	Or some controls don't respond when clicking on them.
+
+Solution:
+ 	Rebuild the project so that the manifest file responsible for using the correct
+	version of the controls gets embedded into the binary file. The file is located here:	
+	\manifests\CommonControls.manifest
+
+ 	Ensure that the file comctl32.dll is on your computer and has at least version 6.
+	The file is part of the operating system and gets distributed by MS beginning with 
+	Windows XP SP3.
+	
+	Further references:
+	https://msdn.microsoft.com/en-us/library/windows/desktop/bb773175(v=vs.85).aspx
+	https://msdn.microsoft.com/en-us/library/windows/desktop/hh298349(v=vs.85).aspx
+	https://stackoverflow.com/questions/13977583/how-to-enable-common-controls-in-a-windows-app
+	
+Problem:
+	Fonts look blurred when larger fonts and higher dpi settings have been selected
+	in the display settings of the operating system.
+	
+Solution:
+	Rebuild the project so that the manifest file responsible for activating high dpi 
+	awareness gets embedded into the binary file. The file is located here:
+	\manifests\DPIaware.manifest
+	
+		
+	
