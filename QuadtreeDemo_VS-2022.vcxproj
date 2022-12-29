@@ -64,7 +64,6 @@
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>.\include\glm;.\include\WinSDK;.\src\Misc;.\src\Utilities;.\src\Dialogs;.\src\Data;.\src\OpenGL;.\src\Freeglut;.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
