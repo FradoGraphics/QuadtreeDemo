@@ -1,8 +1,8 @@
 System requirements:
 ----------------------
 
-Minimum Operating system:   Windows XP SP3
-Minimum OpenGL version:     3.1
+Minimum Operating system:   Windows 7 SP 1
+Required OpenGL version:	3.1
 
 In case of an OpenGL error please update your graphics card drivers. 
 
@@ -15,8 +15,8 @@ Alternatively perform the following steps to use Mesa software rendering:
 Build instructions:
 ----------------------
 
-The project should compile and link in Visual Studio 2005 and later.
-Project and solution files are provided for VS 2005 and VS 2017. 
+The project should compile and link with Visual Studio 2005 and later.
+Project and solution files are provided for VS 2022. 
 Parts of the source code depend on Microsoft's WIN32/ATL libraries.
 
 
