@@ -15,6 +15,8 @@ The OpenGL graphics library is used to render the results, regions as well as th
 
 Example meshes are provided in wavefront *.obj format and can be opened from inside the program.
 
+![quadtreedemo_screenshot](https://user-images.githubusercontent.com/119818594/210186422-5b50c950-29e8-49ec-9f0c-1e3b188c8b7e.png)
+
 
 System requirements:
 ----------------------
