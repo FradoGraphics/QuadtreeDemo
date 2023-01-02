@@ -16,10 +16,8 @@
 // German (Germany) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
-#ifdef _WIN32
 LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 #pragma code_page(1252)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -174,7 +172,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_DIALOG_INFO, DIALOG
     BEGIN
@@ -213,7 +211,7 @@ END
 // Accelerator
 //
 
-IDR_ACCELERATOR1 ACCELERATORS 
+IDR_ACCELERATOR1 ACCELERATORS
 BEGIN
     VK_ESCAPE,      ID_ESCAPE,              VIRTKEY, NOINVERT
     VK_F4,          ID_ESCAPE,              VIRTKEY, ALT, NOINVERT
@@ -232,17 +230,18 @@ END
 // remains consistent on all systems.
 IDI_ICON_TITLE          ICON                    "Resources\\title_quad.ico"
 
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_ERROR_USERDAT       "Userdat directory could not be created."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_ERROR_QUADTREE_PROPS 
                             "Quadtree properties could not be written to disk."
@@ -264,10 +263,10 @@ BEGIN
     IDS_LINK_LICENSE        "<a href=""http://opensource.org/licenses/MIT"">The MIT License</a>"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
-    IDS_LINK_WEBSITE        "<a href=""https://sourceforge.net/projects/quadtreedemo/"">Sourceforge</a>"
-    IDS_AUTHOR              "Frank Dockhorn 2019"
+    IDS_LINK_WEBSITE        "<a href=""https://github.com/FradoGraphics/QuadtreeDemo/"">Github</a>"
+    IDS_AUTHOR              "Frank Dockhorn 2023"
     IDS_LINK_MESA           "https://sourceforge.net/projects/quadtreedemo/files/Mesa/opengl32.zip/download"
     IDS_ERROR_OPENGL2       "Alternatively enable Mesa software rendering by pressing the button below. The demo will then be restarted."
     IDS_RESTART_FAILED      "Restarting application failed. %s"

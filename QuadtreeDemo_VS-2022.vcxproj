@@ -214,6 +214,9 @@
     <Text Include="docs\readme.txt" />
     <Text Include="docs\troubleshooting_guide.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\Resources\title_quad.ico" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

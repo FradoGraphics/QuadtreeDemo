@@ -9,13 +9,13 @@
 #define MajorVersion  2
 #define MinorVersion  34
 #define PatchLevel    1
-#define SubPatchLevel 3
+#define SubPatchLevel 4
 
 #define CompanyName		Frank Dockhorn
 #define FileDescription QuadtreeDemo
 #define ProductName		QuadtreeDemo
 #define InternalName		Quadtree Demo
-#define LegalCopyright	Copyright (C) 2019
+#define LegalCopyright	Copyright (C) 2023
 
 #define _STR_OP_(s) #s
 #define _LSTR_OP_(s) L#s
