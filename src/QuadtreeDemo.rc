@@ -260,7 +260,7 @@ BEGIN
     IDS_ERROR_COMCTRL2      "\nVersion 6 of system module comctl32.dll failed to load.\nPlease try a full rebuild of the project."
     IDS_ERROR_OPENGL1       "Your OpenGL graphics card driver is not supported. Please update your driver to at least version: %d.%d\n\n"
     IDS_LINK_EMAIL          "<a href=""mailto:dexterity2000@gmail.com"">dexterity2000@gmail.com</a>"
-    IDS_LINK_LICENSE        "<a href=""http://opensource.org/licenses/MIT"">The MIT License</a>"
+    IDS_LINK_LICENSE        "<a href=""https://github.com/FradoGraphics/QuadtreeDemo/blob/main/LICENSE"">The MIT License</a>"
 END
 
 STRINGTABLE
