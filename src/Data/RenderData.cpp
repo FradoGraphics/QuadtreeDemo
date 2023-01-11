@@ -225,7 +225,8 @@ void RenderData::getDiagonalResultBB(REAL& diagonal)
 
 void RenderData::extractEdges()
 {
-	std::map<string, int>	edgeMap;
+	std::unordered_map<string, int>	edgeMap;
+
 	char							key1[UCHAR_MAX], key2[UCHAR_MAX];
 	size_t						idx1, idx2;
 	bool							res;
