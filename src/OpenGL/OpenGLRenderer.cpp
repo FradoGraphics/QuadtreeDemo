@@ -466,7 +466,7 @@ void OpenGLRenderer::createRegionVBO()
 void OpenGLRenderer::createRegionsLeftVBO()
 {
 	const PointPtrArray* regionsLeft		= m_renderData.getRegionsLeft();
-	m_numVerticesRegionsLeft				= regionsLeft->size()*4;	
+	m_numVerticesRegionsLeft				= regionsLeft->size()*6;	
 	Vertex_2V*	verticesRegionLeftVBO	= new Vertex_2V[m_numVerticesRegionsLeft];
 
 	size_t k = -1;
@@ -474,6 +474,7 @@ void OpenGLRenderer::createRegionsLeftVBO()
 	{		
 		const vec2* region    = regionsLeft->at(i);
 
+		// first triangle
 		verticesRegionLeftVBO[++k].m_point.x	= region[0].x;
 		verticesRegionLeftVBO[k].m_point.y		= region[0].y;
 
@@ -483,8 +484,15 @@ void OpenGLRenderer::createRegionsLeftVBO()
 		verticesRegionLeftVBO[++k].m_point.x	= region[1].x;
 		verticesRegionLeftVBO[k].m_point.y		= region[1].y;
 
+		// second triangle
+		verticesRegionLeftVBO[++k].m_point.x	= region[1].x;
+		verticesRegionLeftVBO[k].m_point.y		= region[1].y;
+
 		verticesRegionLeftVBO[++k].m_point.x	= region[0].x;
 		verticesRegionLeftVBO[k].m_point.y		= region[1].y;
+
+		verticesRegionLeftVBO[++k].m_point.x	= region[0].x;
+		verticesRegionLeftVBO[k].m_point.y		= region[0].y;
 	}
 
 	// bind and fill VBO data for regions
@@ -853,7 +861,7 @@ void OpenGLRenderer::drawRegionsLeft()
 	glPolygonMode(m_defaultPolygonMode[0], GL_FILL);
 	glBindVertexArray(m_vaoIds[REGIONS_LEFT]);
 	glVertexAttrib4v(VERTEX_COLOR_ATTRIB, &s_colorRegionLeft.r);
-	glDrawArrays(GL_QUADS, 0, (GLsizei)m_numVerticesRegionsLeft);
+	glDrawArrays(GL_TRIANGLES, 0, (GLsizei)m_numVerticesRegionsLeft);
 	glPolygonMode(m_defaultPolygonMode[0], m_defaultPolygonMode[1]);
 	glDisable(GL_BLEND);	
 }
