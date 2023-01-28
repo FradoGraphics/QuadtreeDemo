@@ -1,0 +1,2 @@
+# prevent the archive folder from being zipped.
+/Archive export-ignore
