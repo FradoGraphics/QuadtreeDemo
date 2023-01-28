@@ -4,6 +4,7 @@
 
 /Debug
 /Release
+/Archive
 /.vs
 /JSON/Schemas
 /src/QuadtreeDemo.aps
