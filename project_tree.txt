@@ -1,0 +1,118 @@
+Source
+|   CMakeLists.txt
+|   LICENSE
+|   project_tree.txt
+|   QuadtreeDemo_VS-2022.sln
+|   QuadtreeDemo_VS-2022.vcxproj
+|   QuadtreeDemo_VS-2022.vcxproj.filters
+|   README.md
+|   
++---bin
+|       freeglut.dll
+|       
++---docs
+|       MIT_License.txt
+|       troubleshooting_guide.txt
+|       
++---examples
+|       mesh_1.obj
+|       mesh_2.obj
+|       mesh_3.obj
+|       mesh_4.obj
+|       mesh_5.obj
+|       
++---include
+|   +---glm
+|   |   |   [...]
+|   |           
+|   \---WinSDK
+|           dwmapi.h
+|           
++---lib
+|       freeglut.lib
+|       
++---manifests
+|       CommonControls.manifest
+|       DPIaware.manifest
+|       
++---MesaGL
+|       opengl32.dll
+|       
+\---src
+    |   QuadTree.cpp
+    |   QuadTree.h
+    |   QuadtreeApp.cpp
+    |   QuadtreeApp.h
+    |   QuadtreeDemo.aps
+    |   QuadtreeDemo.cpp
+    |   QuadtreeDemo.rc
+    |   resource.h
+    |   stdafx.cpp
+    |   stdafx.h
+    |   Version.h
+    |   
+    +---Data
+    |       MeshData.cpp
+    |       MeshData.h
+    |       QuadTreeData.cpp
+    |       QuadTreeData.h
+    |       RenderData.cpp
+    |       RenderData.h
+    |       ResultData.h
+    |       
+    +---Dialogs
+    |       AboutDialog.cpp
+    |       AboutDialog.h
+    |       DialogBase.h
+    |       MsgBoxDialog.cpp
+    |       MsgBoxDialog.h
+    |       OpenglDialog.cpp
+    |       OpenglDialog.h
+    |       QuadtreeInfoDialog.cpp
+    |       QuadtreeInfoDialog.h
+    |       
+    +---Freeglut
+    |       FreeglutExtensions.cpp
+    |       FreeglutExtensions.h
+    |       freeglut_ext.h
+    |       freeglut_std.h
+    |       
+    +---Misc
+    |       Vector.cpp
+    |       Vector.h
+    |       
+    +---OpenGL
+    |       gl.h
+    |       glext.h
+    |       glu.h
+    |       OpenGLCamera.cpp
+    |       OpenGLCamera.h
+    |       OpenGLDefinitions.h
+    |       OpenGLExtensions.cpp
+    |       OpenGLExtensions.h
+    |       OpenGLFragmentShader.cpp
+    |       OpenGLFragmentShader.h
+    |       OpenGLInterface.h
+    |       OpenGLProgram.cpp
+    |       OpenGLProgram.h
+    |       OpenGLRenderer.cpp
+    |       OpenGLRenderer.cpp.bak
+    |       OpenGLRenderer.h
+    |       OpenGLShader.cpp
+    |       OpenGLShader.h
+    |       OpenGLVertexShader.cpp
+    |       OpenGLVertexShader.h
+    |       
+    +---Resources
+    |       QuadtreeDemo.rc2
+    |       title_quad.ico
+    |       
+    \---Utilities
+            AppMessageHook.cpp
+            AppMessageHook.h
+            StreamUtils.h
+            trace.cpp
+            trace.h
+            WindowUtils.cpp
+            WindowUtils.h
+            
