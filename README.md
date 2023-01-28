@@ -36,6 +36,5 @@ Build instructions and dependencies:
 ----------------------
 
 The project builds with Visual Studio 2022. A CMakeLists.txt file is provided for project file generation using CMake.
-
-Legacy project and solution files are provided for VS 2017 and VS 2005. Parts of the source code depend on Microsoft's WIN32/ATL libraries.
-The freeglut library is used for OpenGL context creation and navigation control.
+Parts of the source code depend on Microsoft's WIN32/ATL libraries. The freeglut library is used for OpenGL context creation and navigation control.
+Legacy project and solution files are provided for VS 2017 and VS 2005 and can be found in the `Archive` subfolder of this repository. 
