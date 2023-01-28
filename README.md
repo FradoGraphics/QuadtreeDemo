@@ -32,7 +32,7 @@ Alternatively perform the following steps to use Mesa software rendering:
 	where the file "QuadtreeDemo.exe" is located.
 2.	Restart the demo.
 
-Build instructions and dependencies:
+Build environment and dependencies:
 ----------------------
 
 The project builds with Visual Studio 2022. A CMakeLists.txt file is provided for project file generation using CMake.
