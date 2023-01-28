@@ -211,11 +211,13 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="docs\MIT_License.txt" />
-    <Text Include="docs\readme.txt" />
     <Text Include="docs\troubleshooting_guide.txt" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="src\Resources\title_quad.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -232,12 +232,14 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="docs\MIT_License.txt" />
-    <Text Include="docs\readme.txt" />
     <Text Include="docs\troubleshooting_guide.txt" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="src\Resources\title_quad.ico">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

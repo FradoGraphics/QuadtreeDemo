@@ -7,9 +7,9 @@
 */
 
 #define MajorVersion  2
-#define MinorVersion  34
-#define PatchLevel    1
-#define SubPatchLevel 4
+#define MinorVersion  35
+#define PatchLevel    0
+#define SubPatchLevel 0
 
 #define CompanyName		Frank Dockhorn
 #define FileDescription QuadtreeDemo
