@@ -108,15 +108,15 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 
 
-set(PROJECT_NAME QuadtreeDemo)
+set(PROJECT_NAME QuadtreeDemo_VS-2022)
 
 ################################################################################
 # Source groups
 ################################################################################
 set(no_group_source_files
     "docs/MIT_License.txt"
-    "docs/readme.txt"
     "docs/troubleshooting_guide.txt"
+    "README.md"
 )
 source_group("" FILES ${no_group_source_files})
 
