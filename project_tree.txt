@@ -10,6 +10,12 @@ Source
 +---bin
 |       freeglut.dll
 |       
++---CMake
+|       Default.cmake
+|       DefaultCXX.cmake
+|       DefaultFortran.cmake
+|       Utils.cmake
+|       
 +---docs
 |       MIT_License.txt
 |       troubleshooting_guide.txt
@@ -43,7 +49,6 @@ Source
     |   QuadTree.h
     |   QuadtreeApp.cpp
     |   QuadtreeApp.h
-    |   QuadtreeDemo.aps
     |   QuadtreeDemo.cpp
     |   QuadtreeDemo.rc
     |   resource.h
@@ -96,7 +101,6 @@ Source
     |       OpenGLProgram.cpp
     |       OpenGLProgram.h
     |       OpenGLRenderer.cpp
-    |       OpenGLRenderer.cpp.bak
     |       OpenGLRenderer.h
     |       OpenGLShader.cpp
     |       OpenGLShader.h
