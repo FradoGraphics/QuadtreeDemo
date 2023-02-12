@@ -282,14 +282,6 @@ bool OpenGLRenderer::checkOpenGLVersion()
 		return false;
 	}
 
-
-#ifdef FREEGLUT_RUNTIME_LINKING
-	if (!OpenGLExtensions::initCoreFunctions())
-	{
-		return false;
-	}
-#endif
-
 	m_verString = (const char*)glGetString(GL_VERSION);
 
 	glGetIntegerv(GL_MAJOR_VERSION, &m_OpenGLVersion[0]);

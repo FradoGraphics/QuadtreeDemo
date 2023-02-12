@@ -149,7 +149,6 @@ source_group("Header Files\\Dialogs" FILES ${Header_Files__Dialogs})
 set(Header_Files__Freeglut
     "src/Freeglut/freeglut_ext.h"
     "src/Freeglut/freeglut_std.h"
-    "src/Freeglut/FreeglutExtensions.h"
 )
 source_group("Header Files\\Freeglut" FILES ${Header_Files__Freeglut})
 
@@ -159,9 +158,7 @@ set(Header_Files__Misc
 source_group("Header Files\\Misc" FILES ${Header_Files__Misc})
 
 set(Header_Files__OpenGL
-    "src/OpenGL/gl.h"
     "src/OpenGL/glext.h"
-    "src/OpenGL/glu.h"
     "src/OpenGL/OpenGLCamera.h"
     "src/OpenGL/OpenGLDefinitions.h"
     "src/OpenGL/OpenGLExtensions.h"
@@ -213,11 +210,6 @@ set(Source_Files__Dialogs
 )
 source_group("Source Files\\Dialogs" FILES ${Source_Files__Dialogs})
 
-set(Source_Files__Freeglut
-    "src/Freeglut/FreeglutExtensions.cpp"
-)
-source_group("Source Files\\Freeglut" FILES ${Source_Files__Freeglut})
-
 set(Source_Files__Misc
     "src/Misc/Vector.cpp"
 )
@@ -255,7 +247,6 @@ set(ALL_FILES
     ${Source_Files}
     ${Source_Files__Data}
     ${Source_Files__Dialogs}
-    ${Source_Files__Freeglut}
     ${Source_Files__Misc}
     ${Source_Files__OpenGL}
     ${Source_Files__Utilities}
@@ -314,8 +305,8 @@ set_target_properties(${PROJECT_NAME} PROPERTIES MSVC_RUNTIME_LIBRARY ${MSVC_RUN
 # Include directories
 ################################################################################
 target_include_directories(${PROJECT_NAME} PUBLIC
-    "${CMAKE_CURRENT_SOURCE_DIR}/include/glm;"
-    "${CMAKE_CURRENT_SOURCE_DIR}/include/WinSDK;"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/glm;"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/WinSDK;"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/Misc;"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/Utilities;"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/Data;"

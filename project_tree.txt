@@ -26,14 +26,7 @@ Source
 |       mesh_3.obj
 |       mesh_4.obj
 |       mesh_5.obj
-|       
-+---include
-|   +---glm
-|   |   |   [...]
-|   |           
-|   \---WinSDK
-|           dwmapi.h
-|           
+|                  
 +---lib
 |       freeglut.lib
 |       
@@ -77,8 +70,6 @@ Source
     |       QuadtreeInfoDialog.h
     |       
     +---Freeglut
-    |       FreeglutExtensions.cpp
-    |       FreeglutExtensions.h
     |       freeglut_ext.h
     |       freeglut_std.h
     |       
@@ -87,9 +78,7 @@ Source
     |       Vector.h
     |       
     +---OpenGL
-    |       gl.h
     |       glext.h
-    |       glu.h
     |       OpenGLCamera.cpp
     |       OpenGLCamera.h
     |       OpenGLDefinitions.h
@@ -110,6 +99,12 @@ Source
     +---Resources
     |       QuadtreeDemo.rc2
     |       title_quad.ico
+    |
+    +---glm
+    |       [...]
+    |           
+    \---WinSDK
+    |       dwmapi.h
     |       
     \---Utilities
             AppMessageHook.cpp

@@ -129,29 +129,13 @@
 #define FREEGLUT_APIENTRYP FGAPIENTRY * 
 #endif
 
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutInitContextVersion)	(int majorVersion, int minorVersion);
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutInitContextProfile)	(int profile);
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutSetOption)				(GLenum option_flag, int value);
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutInitErrorFunc)			(void (* callback)( const char *fmt, va_list ap ));
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutPositionFunc)			(void (* callback)( int, int ));
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutCloseFunc)				(void (* callback)( void ));
 
-#ifdef FREEGLUT_RUNTIME_LINKING
-	extern pFuncGlutInitContextVersion	glutInitContextVersion;
-	extern pFuncGlutInitContextProfile	glutInitContextProfile;
-	extern pFuncGlutSetOption				glutSetOption;
-	extern pFuncGlutInitErrorFunc			glutInitErrorFunc;
-	extern pFuncGlutPositionFunc			glutPositionFunc;
-	extern pFuncGlutCloseFunc				glutCloseFunc;
-
-#else
-	FGAPI void    FGAPIENTRY glutInitContextVersion	( int majorVersion, int minorVersion );
-	FGAPI void    FGAPIENTRY glutInitContextProfile	( int profile );
-	FGAPI void    FGAPIENTRY glutSetOption				( GLenum option_flag, int value );
-	FGAPI void    FGAPIENTRY glutInitErrorFunc		( void (* callback)( const char *fmt, va_list ap ) );
-	FGAPI void    FGAPIENTRY glutPositionFunc			( void (* callback)( int, int ) );
-	FGAPI void    FGAPIENTRY glutCloseFunc				( void (* callback)( void ) );
-#endif
+FGAPI void    FGAPIENTRY glutInitContextVersion	( int majorVersion, int minorVersion );
+FGAPI void    FGAPIENTRY glutInitContextProfile	( int profile );
+FGAPI void    FGAPIENTRY glutSetOption				( GLenum option_flag, int value );
+FGAPI void    FGAPIENTRY glutInitErrorFunc		( void (* callback)( const char *fmt, va_list ap ) );
+FGAPI void    FGAPIENTRY glutPositionFunc			( void (* callback)( int, int ) );
+FGAPI void    FGAPIENTRY glutCloseFunc				( void (* callback)( void ) );
 
 /*
  * Process loop function, see fg_main.c

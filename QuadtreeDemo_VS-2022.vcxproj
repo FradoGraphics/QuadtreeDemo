@@ -62,7 +62,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.\include\glm;.\include\WinSDK;.\src\Misc;.\src\Utilities;.\src\Dialogs;.\src\Data;.\src\OpenGL;.\src\Freeglut;.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\src\glm;.\src\WinSDK;.\src\Misc;.\src\Utilities;.\src\Dialogs;.\src\Data;.\src\OpenGL;.\src\Freeglut;.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -99,7 +99,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.\include\glm;.\include\WinSDK;.\src\Utilities;.\src\Data;.\src\Dialogs;.\src\Misc;.\src\OpenGL;.\src\Freeglut;.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\src\glm;.\src\WinSDK;.\src\Utilities;.\src\Data;.\src\Dialogs;.\src\Misc;.\src\OpenGL;.\src\Freeglut;.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
@@ -145,7 +145,6 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
     </ClCompile>
-    <ClCompile Include="src\Freeglut\FreeglutExtensions.cpp" />
     <ClCompile Include="src\Misc\Vector.cpp" />
     <ClCompile Include="src\OpenGL\OpenGLCamera.cpp" />
     <ClCompile Include="src\OpenGL\OpenGLExtensions.cpp" />
@@ -180,13 +179,10 @@
     <ClInclude Include="src\Dialogs\MsgBoxDialog.h" />
     <ClInclude Include="src\Dialogs\OpenglDialog.h" />
     <ClInclude Include="src\Dialogs\QuadtreeInfoDialog.h" />
-    <ClInclude Include="src\Freeglut\FreeglutExtensions.h" />
     <ClInclude Include="src\Freeglut\freeglut_ext.h" />
     <ClInclude Include="src\Freeglut\freeglut_std.h" />
     <ClInclude Include="src\Misc\Vector.h" />
-    <ClInclude Include="src\OpenGL\gl.h" />
     <ClInclude Include="src\OpenGL\glext.h" />
-    <ClInclude Include="src\OpenGL\glu.h" />
     <ClInclude Include="src\OpenGL\OpenGLCamera.h" />
     <ClInclude Include="src\OpenGL\OpenGLDefinitions.h" />
     <ClInclude Include="src\OpenGL\OpenGLExtensions.h" />

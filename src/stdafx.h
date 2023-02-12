@@ -25,8 +25,6 @@
 #define _CRTDBG_MAP_ALLOC
 #define _CRT_RAND_S
 
-//#define FREEGLUT_RUNTIME_LINKING
-
 #include <stdlib.h>
 #include <crtdbg.h>
 

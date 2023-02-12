@@ -27,9 +27,6 @@
 #include "OpenGLRenderer.h"
 #include "version.h"
 
-#if defined FREEGLUT_RUNTIME_LINKING
-	#include "FreeglutExtensions.h"
-#endif
 
 void errorFunc				(const char* string, va_list ap);
 void keyFunc				(unsigned char k, int x, int y);
@@ -176,13 +173,6 @@ int QuadtreeApp::init(int argc, char* argv[])
 		return 0;
 	}
 	checkForMesaGL();
-#ifdef FREEGLUT_RUNTIME_LINKING	
-	if (!FreeglutExtensions::loadLibrary())
-	{
-		showInitErrorMessage("Freeglut could not be initialized.");
-		return 0;
-	}
-#endif
 
 	glutInit(&argc, argv);   
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
@@ -249,9 +239,6 @@ int QuadtreeApp::init(int argc, char* argv[])
 	m_wndPosStatus = m_wndInfo.m_DlgSnapStatus;
 	glutMainLoop();
 
-#if defined FREEGLUT_RUNTIME_LINKING
-	FreeglutExtensions::freeLibrary();
-#endif
 	return 0;
 }
 

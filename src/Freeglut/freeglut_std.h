@@ -73,8 +73,6 @@
 #       define FGAPIENTRY __stdcall
 #       if defined(FREEGLUT_EXPORTS)
 #           define FGAPI __declspec(dllexport)
-#       elif defined(FREEGLUT_RUNTIME_LINKING)
-#           define FGAPI
 #		  else
 #           define FGAPI __declspec(dllimport)
 
@@ -93,8 +91,6 @@
 #       pragma comment (lib, "gdi32.lib")    /* link Windows GDI lib        */
 #       pragma comment (lib, "winmm.lib")    /* link Windows MultiMedia lib */
 #       pragma comment (lib, "user32.lib")   /* link Windows user lib       */
-#	 endif
-#	 if !defined (FREEGLUT_RUNTIME_LINKING) 	
 #       pragma comment (lib, "opengl32.lib") /* link Microsoft OpenGL lib   */
 #   endif
 
@@ -395,62 +391,24 @@
 #define FREEGLUT_APIENTRYP FGAPIENTRY * 
 #endif
 
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutInit)						(int* pargc, char** argv);
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutSetCursor)				(int cursor);
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutDestroyWindow)			(int window);
-typedef int		(FREEGLUT_APIENTRYP	pFuncGlutGetModifiers)			(void);
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutMainLoop)				(void);
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutInitWindowPosition)	(int x, int y);
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutInitWindowSize)		(int width, int height);
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutInitDisplayMode)		(unsigned int displayMode);
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutSwapBuffers)			(void);
-typedef int		(FREEGLUT_APIENTRYP	pFuncGlutCreateWindow)			(const char* title);
 
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutKeyboardFunc)			(void (* callback)( unsigned char, int, int));
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutSpecialFunc)			(void (* callback)( int, int, int ));
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutReshapeFunc)			(void (* callback)( int, int ));
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutMouseFunc)				(void (* callback)( int, int, int, int ));
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutMotionFunc)				(void (* callback)( int, int ));
-typedef void	(FREEGLUT_APIENTRYP	pFuncGlutDisplayFunc)			(void (* callback)( void ));
+FGAPI void    FGAPIENTRY glutInit					( int* pargc, char** argv );
+FGAPI void    FGAPIENTRY glutSetCursor				( int cursor );	
+FGAPI void    FGAPIENTRY glutDestroyWindow		( int window );
+FGAPI int     FGAPIENTRY glutGetModifiers			( void );
+FGAPI void    FGAPIENTRY glutMainLoop				( void ); 
+FGAPI void    FGAPIENTRY glutInitWindowPosition	( int x, int y );
+FGAPI void    FGAPIENTRY glutInitWindowSize		( int width, int height );
+FGAPI void    FGAPIENTRY glutInitDisplayMode		( unsigned int displayMode );
+FGAPI void    FGAPIENTRY glutSwapBuffers			( void );
+FGAPI int     FGAPIENTRY glutCreateWindow			( const char* title );
 
-
-#ifdef FREEGLUT_RUNTIME_LINKING
-	extern pFuncGlutInit						glutInit;
-	extern pFuncGlutSetCursor				glutSetCursor;
-	extern pFuncGlutDestroyWindow			glutDestroyWindow;
-	extern pFuncGlutGetModifiers			glutGetModifiers;
-	extern pFuncGlutMainLoop				glutMainLoop;
-	extern pFuncGlutInitWindowPosition	glutInitWindowPosition;
-	extern pFuncGlutInitWindowSize		glutInitWindowSize;
-	extern pFuncGlutInitDisplayMode		glutInitDisplayMode;
-	extern pFuncGlutSwapBuffers			glutSwapBuffers;
-	extern pFuncGlutCreateWindow			glutCreateWindow;
-
-	extern pFuncGlutKeyboardFunc			glutKeyboardFunc;
-	extern pFuncGlutSpecialFunc			glutSpecialFunc;
-	extern pFuncGlutReshapeFunc			glutReshapeFunc;
-	extern pFuncGlutMouseFunc				glutMouseFunc;
-	extern pFuncGlutMotionFunc				glutMotionFunc;
-	extern pFuncGlutDisplayFunc			glutDisplayFunc;
-#else
-	FGAPI void    FGAPIENTRY glutInit					( int* pargc, char** argv );
-	FGAPI void    FGAPIENTRY glutSetCursor				( int cursor );	
-	FGAPI void    FGAPIENTRY glutDestroyWindow		( int window );
-	FGAPI int     FGAPIENTRY glutGetModifiers			( void );
-	FGAPI void    FGAPIENTRY glutMainLoop				( void ); 
-	FGAPI void    FGAPIENTRY glutInitWindowPosition	( int x, int y );
-	FGAPI void    FGAPIENTRY glutInitWindowSize		( int width, int height );
-	FGAPI void    FGAPIENTRY glutInitDisplayMode		( unsigned int displayMode );
-	FGAPI void    FGAPIENTRY glutSwapBuffers			( void );
-	FGAPI int     FGAPIENTRY glutCreateWindow			( const char* title );
-
-	FGAPI void    FGAPIENTRY glutKeyboardFunc			( void (* callback)( unsigned char, int, int ) );
-	FGAPI void    FGAPIENTRY glutSpecialFunc			( void (* callback)( int, int, int ) );
-	FGAPI void    FGAPIENTRY glutReshapeFunc			( void (* callback)( int, int ) );
-	FGAPI void    FGAPIENTRY glutMouseFunc				( void (* callback)( int, int, int, int ) );
-	FGAPI void    FGAPIENTRY glutMotionFunc			( void (* callback)( int, int ) );
-	FGAPI void    FGAPIENTRY glutDisplayFunc			( void (* callback)( void ) );
-#endif
+FGAPI void    FGAPIENTRY glutKeyboardFunc			( void (* callback)( unsigned char, int, int ) );
+FGAPI void    FGAPIENTRY glutSpecialFunc			( void (* callback)( int, int, int ) );
+FGAPI void    FGAPIENTRY glutReshapeFunc			( void (* callback)( int, int ) );
+FGAPI void    FGAPIENTRY glutMouseFunc				( void (* callback)( int, int, int, int ) );
+FGAPI void    FGAPIENTRY glutMotionFunc			( void (* callback)( int, int ) );
+FGAPI void    FGAPIENTRY glutDisplayFunc			( void (* callback)( void ) );
 
 FGAPI void    FGAPIENTRY glutInitDisplayString( const char* displayMode );
 

@@ -10,13 +10,8 @@
 #ifndef OPENGL_INTERFACE
 #define OPENGL_INTERFACE
 
-#if defined FREEGLUT_RUNTIME_LINKING
-	#include "glu.h"
-	#include "gl.h"
-#else
-	#include <GL/glu.h>	
-	#include <GL/gl.h>	
-#endif
+#include <GL/glu.h>	
+#include <GL/gl.h>	
 
 #include "glext.h"
 #include "OpenGLDefinitions.h"
@@ -53,24 +48,6 @@ extern PFNGLDELETEVERTEXARRAYSPROC			glDeleteVertexArrays;
 extern PFNGLVERTEXATTRIB4VPROC				glVertexAttrib4v;
 extern PFNGLDELETEPROGRAMPROC					glDeleteProgram;
 extern PFNGLVERTEXATTRIBLPOINTERPROC		glVertexAttribLPointer;
-
-#if defined FREEGLUT_RUNTIME_LINKING
-	extern pFuncGlDrawArrays	glDrawArrays;
-	extern pFuncGlLineWidth		glLineWidth;
-	extern pFuncGlGetIntegerv  glGetIntegerv;
-	extern pFuncGlDepthRange	glDepthRange;
-	extern pFuncGlDepthFunc		glDepthFunc;
-	extern pFuncGlEnable			glEnable;
-	extern pFuncGlViewport		glViewport;
-	extern pFuncGlPolygonMode	glPolygonMode;
-	extern pFuncGlClearColor	glClearColor;
-	extern pFuncGlClear			glClear;
-	extern pFuncGlDrawElements	glDrawElements;
-	extern pFuncGlPointSize		glPointSize;
-	extern pFuncGlDisable		glDisable;	
-	extern pFuncGlBlendFunc		glBlendFunc;
-	extern pFuncGlGetString		glGetString;
-#endif
 
 
 #endif
