@@ -16,7 +16,6 @@ class OpenGLExtensions
 public:
 	static	bool				initExtensions			();
 	static	bool				isExtensionSupported	(char* szTargetExtension);
-	static	bool				initCoreFunctions		();
 	static	PROC WINAPI		wglGetProcAddress		(LPCSTR lpszProc);
 	static	HGLRC WINAPI	wglGetCurrentContext	();
 };
