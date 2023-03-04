@@ -177,7 +177,7 @@ int QuadtreeApp::init(int argc, char* argv[])
 	glutInit(&argc, argv);   
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 	glutInitContextVersion(MAJOR_VERSION_GL, MINOR_VERSION_GL);
-	glutInitContextProfile(GLUT_CORE_PROFILE);
+	glutInitContextProfile(GLUT_COMPATIBILITY_PROFILE);
 	glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_CONTINUE_EXECUTION);
 	glutInitErrorFunc(::errorFunc);
 	tstring tempPath = m_defaultPath;

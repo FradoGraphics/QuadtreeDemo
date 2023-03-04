@@ -23,7 +23,7 @@ const char* OpenGLShader::s_doublePrecision =
 			";
 
 const char* OpenGLShader::s_floatingPointPrecision =
-			"#version 140\n\
+			"#version 150\n\
 			precision highp float;\n\
 			#define VEC3 vec3\n\
 			#define VEC4 vec4\n\

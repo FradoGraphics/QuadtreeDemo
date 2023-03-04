@@ -42,7 +42,7 @@
 	typedef float			REAL;	
 	typedef PFNGLUNIFORMMATRIX4FVPROC	PFNGLUNIFORMMATRIX4VPROC;
 	typedef PFNGLVERTEXATTRIB4FVPROC		PFNGLVERTEXATTRIB4VPROC;
-	#define POLYGONMODE	GL_FRONT
+	#define POLYGONMODE	GL_FRONT_AND_BACK
 	#define GL_REAL		GL_FLOAT
 	#define PREC_SCAN		"%f %f"
 	#define PREC_SCAN_2	"%f"
@@ -54,7 +54,7 @@
 	#define VERTEXSHADER_NAME				"Shader.vert"  
 	#define FRAGMENTSHADER_NAME			"Shader.frag"
 	#define MAJOR_VERSION_GL 3
-	#define MINOR_VERSION_GL 1
+	#define MINOR_VERSION_GL 2
 #endif
 
 enum vaoAttributIndices
