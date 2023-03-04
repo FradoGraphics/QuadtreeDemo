@@ -2,7 +2,7 @@ Troubleshooting Guide for building or running the project:
 -----------------------------------------------------------
 
 Problem:
-	Your OpenGL windows driver doesn't support version 3.1. 
+	Your OpenGL windows driver doesn't support version 3.2. 
 
 Solution:
 	Try to update your graphics card drivers.
