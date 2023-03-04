@@ -22,7 +22,7 @@ System requirements:
 ----------------------
 
 - Minimum Operating system:   	Windows 7 SP1
-- Required OpenGL version:	3.1
+- Required OpenGL version:	3.2
 
 In case of an OpenGL error please update your graphics card drivers. 
 
